@@ -1,0 +1,111 @@
+.category{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.category-list{
+    list-style: none;
+    display: flex;
+    overflow: auto;
+}
+.category-bar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.category-bar label{
+    
+    margin-right: 1.1rem;
+}
+.category-list-items{
+    margin-right: 1rem;
+    border: 1px solid white;
+    color: black;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10rem;
+    
+   
+}
+
+.category-list-item  {
+    
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    
+}
+.i1{
+    background-color: rgb(109, 38, 242);
+}
+.one:hover{
+    border: 1px solid rgb(109, 38, 242);
+}
+.i2{
+    background-color: rgb(249, 204, 75);
+}
+.two:hover{
+    border: 1px solid rgb(249, 204, 75);
+}
+.i3{
+    background-color: rgb(65, 169, 87);
+}
+.three:hover{
+    border: 1px solid rgb(65, 169, 87);
+}
+.i4{
+    background-color:  rgb(0, 217, 177);
+}
+.four:hover{
+    border: 1px solid rgb(0, 217, 177);
+}
+.i5{
+    background-color: rgb(60, 217, 255);
+}
+.five:hover{
+    border: 1px solid rgb(60, 217, 255);
+}
+.i6{
+    background-color: rgb(206, 82, 201);
+}
+.six:hover{
+    border: 1px solid rgb(206, 82, 201);
+}
+.i7{
+    background-color: rgb(0, 83, 249);
+}
+.seven:hover{
+    border: 1px solid rgb(0, 83, 249);
+}
+.i8{
+    background-color: rgb(248, 37, 53);
+}
+.eight:hover{
+    border: 1px solid rgb(248, 37, 53);
+}
+.i9{
+    background-color: rgb(190, 202, 0);
+}
+.nine:hover{
+    border: 1px solid rgb(190, 202, 0);
+}
+.i10{
+    background-color: rgb(0, 237, 255);
+}
+.ten:hover{
+    border: 1px solid rgb(0, 237, 255);
+}
+
+
+
+
+
