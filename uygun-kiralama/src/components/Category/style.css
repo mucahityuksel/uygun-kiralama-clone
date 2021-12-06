@@ -3,9 +3,11 @@
     justify-content: center;
     text-align: center;
     display: flex;
+    
 }
 
 .category-list{
+    margin-top: 10rem;
     list-style: none;
     display: flex;
     overflow: auto;
@@ -16,12 +18,13 @@
     text-align: center;
     
 }
+
 .category-bar label{
     
     margin-right: 1.1rem;
 }
 .category-list-items{
-    margin-right: 1rem;
+    margin-right: 2rem;
     border: 1px solid white;
     color: black;
     width: 6rem;

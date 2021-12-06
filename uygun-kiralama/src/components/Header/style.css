@@ -1,16 +1,16 @@
 .header-component{
     display: flex;
-    
+    position: fixed;
     justify-content: center;
     width: 100%;
     align-items: center;
     height: 7rem;
-    top: 0;
+    background-color: white;
     border-bottom: 1px solid #e6e3e3;
 }
 .header-image {
     
-    margin: 0rem 1rem;
+    margin: 0rem 2rem;
 
 }
 .header-image img{
@@ -24,7 +24,7 @@
     text-align: center;
     background-color: #f8f8f8;
     border-radius: 0.5rem;
-    margin-right: 1rem;
+    margin: 0rem 2rem;
   
 }
 .header-search-icon{
@@ -45,6 +45,7 @@
 
 .header-select{
     overflow: hidden;
+    margin: 0rem 1rem;
 }
 .dropbtn{
     display: inline-block;

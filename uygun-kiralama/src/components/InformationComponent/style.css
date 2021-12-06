@@ -1,0 +1,57 @@
+.information-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.inline-container{
+    background-image: url("../../images/body-image.png");
+    width: 80rem;
+    margin: 0px auto;
+    border-radius: 2rem;
+    padding: 1rem;
+    
+    
+}
+.first{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.second{
+    width: 3rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.third{
+    font-size: 2rem;
+    font-weight: 300;
+    width: 20rem;
+}
+.info-button{
+    border: none;
+    outline: none;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+.info-button:hover {
+    background-color: #15214a;
+    color: white;
+    outline: 1px solid white;
+    transition: .3s ease-in-out;
+}
+.inline-container .image-text{
+    color: white;
+    margin-top: 1rem;
+    text-align: start;
+    margin-left: 2rem;
+    width: 30rem;
+}
+
+.inline-container img{
+    object-fit: contain;
+    width: 80rem;
+}

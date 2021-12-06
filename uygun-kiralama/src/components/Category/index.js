@@ -1,11 +1,14 @@
 import React from 'react'
-import {MdOutlineDirectionsCarFilled,IoHardwareChipOutline,BiBuilding,FaCouch,GiWeight,VscBook,BsTools,BsShopWindow,GiLargeDress,IoMdFootball} from "react-icons/all"
+import {AiOutlineLeft,MdOutlineDirectionsCarFilled,IoHardwareChipOutline,BiBuilding,FaCouch,GiWeight,VscBook,BsTools,BsShopWindow,GiLargeDress,IoMdFootball} from "react-icons/all"
 import "./style.css"
 
 function Category() {
   return (
     <div className="category">
       <ul className="category-list">
+          <div className="left-side-bar">
+            
+          </div>
           <div className="category-bar">
               <li className="category-list-items one"><div className="category-list-item i1"><MdOutlineDirectionsCarFilled size="2em" color="white"/></div></li>
               <label>Vasıta</label>
@@ -45,6 +48,9 @@ function Category() {
           <div className="category-bar">
             <li className="category-list-items ten"><div className="category-list-item i10"><IoMdFootball size="2em" color="white"/></div></li>
             <label>Spor</label>
+          </div>
+          <div className="right-side-bar">
+            
           </div>
       </ul>
     </div>
