@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img from "../../images/uygun-kirala-image.svg"
 import {RiSearchLine,BsPlusCircleFill,MdLogout,FiChevronDown} from "react-icons/all"
 import "./style.css"
 
 function Header() {
+    
+    const [city,setCity] = useState("");
+
+    
   return (
     <div className="header-component">
         <div className="header-image">
@@ -32,7 +36,7 @@ function Header() {
                 <FiChevronDown color="#a09e9e"></FiChevronDown>
                 <div className="dropdown-content">
                     <a className="dropdown-search">
-                        <input placeholder="Search"></input>
+                        <input placeholder="Search" ></input>
                         <RiSearchLine></RiSearchLine>
                     </a>
                     <a>İstanbul</a>

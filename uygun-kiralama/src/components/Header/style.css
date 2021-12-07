@@ -5,8 +5,11 @@
     width: 100%;
     align-items: center;
     height: 7rem;
+    z-index: 10;
+    opacity: 1;
     background-color: white;
     border-bottom: 1px solid #e6e3e3;
+    
 }
 .header-image {
     
@@ -30,9 +33,6 @@
 .header-search-icon{
     float: left;
     margin: 0.7rem 0.5rem;
-}
-.header-select-icon{
-    
 }
 .input-container input{
     width: 30rem;

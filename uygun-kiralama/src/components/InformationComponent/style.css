@@ -1,40 +1,81 @@
 .information-container{
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    text-align: start;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    display: flex;
+    
+    
 }
 
-.inline-container{
+.inline-container1{
     background-image: url("../../images/body-image.png");
-    width: 80rem;
-    margin: 0px auto;
-    border-radius: 2rem;
+    width: 80rem; 
+    border-radius: 1.5rem;
     padding: 1rem;
+    height: 23rem;
+    opacity: 1;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    position:absolute;
+    transition-duration :0.9s, 0.9s;
     
-    
+}
+.inline-container2{
+    background-image: url("../../images/body-images.png");
+    width: 75rem; 
+    height: 23rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    opacity: 1;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    position:relative;
+    transition-duration :0.9s, 0.9s;   
+}
+.active{
+    opacity: 1;   
+}
+
+.circle-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.circle-item{
+    margin-left: 1rem;
+    cursor: pointer;
 }
 .first{
     font-size: 0.8rem;
     font-weight: 500;
+    color: white;
 }
 
 .second{
-    width: 3rem;
-    font-size: 3rem;
+    width: 20rem;
+    font-size: 2.5rem;
     font-weight: 900;
+    color: white;
 }
 .third{
     font-size: 2rem;
     font-weight: 300;
-    width: 20rem;
+    width: 29rem;
+    color: white;
 }
 .info-button{
     border: none;
     outline: none;
     width: 10rem;
     height: 3rem;
+    margin-top: 1rem;
     border-radius: 0.5rem;
 }
 .info-button:hover {

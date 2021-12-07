@@ -1,0 +1,74 @@
+{
+    "product" : [
+        {
+            "id" : "1",
+            "check" : false,
+            "salerytitle" : "$11/Hafta",
+            "title" : "Vento Sofa Bed",
+            "subtitle" : "Furniture",
+            "rating" : 5,
+            "pricetitle" : "Depozito Miktarı",
+            "price" : "50$",
+            "icontext" : "Sigorta Korumalı",
+            "avatar" : "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg",
+            "sendby" : "Reklamı Gönderen",
+            "salery" : "Faruk Güngör"
+        },
+        {
+            "id" : "2",
+            "check" : false,
+            "salerytitle" : "$12/Hafta",
+            "title" : "Table",
+            "subtitle" : "Furniture",
+            "rating" : 4.5,
+            "pricetitle" : "Depozito Miktarı",
+            "price" : "40$",
+            "icontext" : "Sigorta Korumalı",
+            "avatar" : "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg",
+            "sendby" : "Reklamı Gönderen",
+            "salery" : "Mehmet Polat Koçak"
+        },
+        {
+            "id" : "3",
+            "check" : false,
+            "salerytitle" : "$13/Hafta",
+            "title" : "Armchair",
+            "subtitle" : "Furniture",
+            "rating" : 3.5,
+            "pricetitle" : "Depozito Miktarı",
+            "price" : "30$",
+            "icontext" : "Sigorta Korumalı",
+            "avatar" : "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg",
+            "sendby" : "Reklamı Gönderen",
+            "salery" : "Emin Sözüer"
+        },
+        {
+            "id" : "4",
+            "check" : false,
+            "salerytitle" : "$14/Hafta",
+            "title" : "Shelf",
+            "subtitle" : "Furniture",
+            "rating" : 3.5,
+            "pricetitle" : "Depozito Miktarı",
+            "price" : "60$",
+            "icontext" : "Sigorta Korumalı",
+            "avatar" : "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg",
+            "sendby" : "Reklamı Gönderen",
+            "salery" : "Bayram Özge"
+        },
+        {
+            "id" : "5",
+            "check" : false,
+            "salerytitle" : "$15/Hafta",
+            "title" : "Bed",
+            "subtitle" : "Furniture",
+            "rating" : 4.5,
+            "pricetitle" : "Depozito Miktarı",
+            "price" : "20$",
+            "icontext" : "Sigorta Korumalı",
+            "avatar" : "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg",
+            "sendby" : "Reklamı Gönderen",
+            "salery" : "Can Kılıç"
+        }
+    ]
+}
