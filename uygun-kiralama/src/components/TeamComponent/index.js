@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import image from "../../images/uygun-kirala-image.svg"
 import data from "../../user.json"
-import BtnSlider from './BtnSlider'
+import BtnSlider from './btnSlider'
 import "./style.css"
 
 function TeamComponent() {
