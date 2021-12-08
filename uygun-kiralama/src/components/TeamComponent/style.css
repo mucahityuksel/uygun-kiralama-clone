@@ -1,0 +1,129 @@
+.team-container{
+    margin-top: 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.team-body{
+    display: flex;
+    border: 1px solid rgb(231, 232, 236);
+    border-radius: 0.5rem;
+}
+
+.left-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 45rem;
+    border-right: 1px solid rgb(231, 232, 236);
+    
+    padding: 7rem;
+    
+}
+.team-title{
+    color: #15214a;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.team-desc{
+    color: rgba(21, 33, 74, 0.5);
+    margin-top: 1rem;
+}
+.team-desc1{
+    font-size: 0.8rem;
+    
+}
+.team-name{
+    color: #15214a;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.team-title2{
+    color: #15214a;
+    margin-top: 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.team-image{
+    width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+}
+.slide {
+    width: 20rem;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: opacity ease-in-out 0.4s;
+ 
+  }
+.active-anim {
+    opacity: 1;
+}
+.btn-slide {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.prev {  
+    transform: translateY(-60%);
+    margin-top: 12rem;
+    background-color: #15214a   
+}
+.next {
+    margin-top: 12rem;
+    margin-left: 3rem;
+    transform: translateY(-60%); 
+    background-color: #15214a    
+}
+.btn-slide img {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+    color: white;
+    
+  }
+.right-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 9rem;
+}
+.team-slider{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .team-body{
+        display: flex;
+        flex-direction: column;
+        
+       
+        
+        
+    }
+    .left-bar{
+        
+        width: 10rem;
+    }
+    .right-bar{
+        width: 10rem;
+        text-align: start;
+        padding: 4rem;
+        
+    }
+}

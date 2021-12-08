@@ -1,0 +1,94 @@
+.footer-container{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(192, 196, 207);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.footer-container ul li {
+    flex: 1;
+    padding: 0rem 5rem;
+    margin-bottom: 1rem;
+    
+}
+.first-list,.second-list,.third-list{
+    display: flex;
+    
+    flex-direction: column;
+}
+.footer-title{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.footer-text{
+    margin-top: 1rem;
+    color: rgb(114, 121, 146);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.footer-text:hover{
+   text-decoration: underline;
+}
+.fourt-list{
+    display: flex;
+    flex-direction: column;
+}
+.four-items{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    
+    
+}
+.four-items div{
+    margin-left: 1rem;
+    color: rgb(114, 121, 146);
+}
+.mail{
+    margin-left: 1rem;
+    color: rgb(255, 25, 144);
+}
+
+.mail:hover{
+    text-decoration: underline;
+}
+.last-footer{
+    display: flex;
+}
+
+.last-one{
+    width: 35rem;
+    text-align: start;
+    color: rgb(114, 121, 146);
+    font-size: 0.9rem;
+}
+.last-two{
+    
+    width: 35rem;
+    text-align: end;
+}
+@media only screen and (max-width: 600px) {
+    .footer-container ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15rem;
+    }
+    .last-footer{
+        display: flex;
+        
+    }
+    .last-one,.last-two{
+        width: 10rem;
+    }
+}

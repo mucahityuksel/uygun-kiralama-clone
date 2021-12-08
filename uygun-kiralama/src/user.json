@@ -1,0 +1,22 @@
+{
+    "user" : [
+        {
+            "id" : 1,
+            "name" : "Mehmet Polat Koçak",
+            "department" : "Frontend Developer",
+            "text" : "This is simply unbelievable! Rental is the most valuable business resource we have EVER purchased. Rental is both attractive"
+        },
+        {
+            "id" : 2,
+            "name" : "Mehmet Polat Koçak",
+            "department" : "Frontend Developer",
+            "text" : "This is simply unbelievable! Rental is the most valuable business resource we have EVER purchased. Rental is both attractive"
+        },
+        {
+            "id" : 3,
+            "name" : "Mehmet Polat Koçak",
+            "department" : "Frontend Developer",
+            "text" : "This is simply unbelievable! Rental is the most valuable business resource we have EVER purchased. Rental is both attractive"
+        }
+    ]
+}

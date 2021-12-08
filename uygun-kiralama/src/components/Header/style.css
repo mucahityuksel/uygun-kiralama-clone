@@ -181,3 +181,21 @@
     color: #525050;
     
 }
+
+@media only screen and (max-width: 600px) {
+    .input-container{
+        display: none;
+    }
+    
+    .header-select{
+        display: none;
+    }
+    .header-login{
+        display: none;
+    }
+    .header-component{
+       justify-content: start;
+       width: 20rem;
+    }
+    
+}

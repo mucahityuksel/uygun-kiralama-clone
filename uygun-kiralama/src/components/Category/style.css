@@ -3,7 +3,7 @@
     justify-content: center;
     text-align: center;
     display: flex;
-    
+    margin-bottom: 5rem;
 }
 
 .category-list{
@@ -112,3 +112,12 @@
 
 
 
+@media only screen and (max-width: 600px) {
+
+    .category{
+        min-width: 10rem;
+        max-width: 20rem;
+        margin-left: 1rem;
+    }
+
+}

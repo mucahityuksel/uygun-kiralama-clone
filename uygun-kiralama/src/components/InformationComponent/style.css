@@ -2,7 +2,7 @@
     align-items: center;
     justify-content: center;
     text-align: start;
-    margin-top: 15rem;
+    
     margin-bottom: 15rem;
     display: flex;
     
@@ -95,4 +95,13 @@
 .inline-container img{
     object-fit: contain;
     width: 80rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .inline-container1{
+        width: 20rem;
+    }
+    .inline-container2{
+        width: 20rem;
+    }
 }

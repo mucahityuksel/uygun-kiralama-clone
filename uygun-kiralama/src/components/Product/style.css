@@ -1,7 +1,7 @@
 .products-container{
     
-    margin-top: 15rem;
-    margin-bottom: 15rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,4 +210,24 @@
     margin-left: 1rem;
     width: 1.5rem;
     height: 2rem;
+}
+@media only screen and (max-width: 600px) {
+    
+    .product-card{
+        width: 45rem;
+        margin-left: 5rem;
+    }
+    .products{
+        width: 30rem;
+    }
+    .product{
+        border: none;
+        margin-left: 0rem;
+        width: 25rem;
+    }
+    .product-image{
+        object-fit: contain;
+        width: 18rem;
+        height: 18rem;
+    }
 }
