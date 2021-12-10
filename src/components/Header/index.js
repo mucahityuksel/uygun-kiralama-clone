@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import img from "../../images/uygun-kirala-image.svg"
-import {RiSearchLine,BsPlusCircleFill,MdLogout,FiChevronDown} from "react-icons/all"
+import {RiSearchLine,BsPlusCircleFill,MdLogout,FiChevronDown,FaBars} from "react-icons/all"
 import "./style.css"
 
 function Header() {
@@ -17,7 +17,7 @@ function Header() {
             <RiSearchLine className="header-search-icon"></RiSearchLine>
             <input className="header-search"></input>
             
-            <label className="dropdown1">Select
+            <div className="dropdown1">Select
             <FiChevronDown className="header-select-icon"></FiChevronDown>
             <div className="dropdown-content1">
                     <a className="dropdown-search">
@@ -28,7 +28,10 @@ function Header() {
                     <a>Fitness</a>
                     <a>Books</a>
                 </div>
-            </label>
+            </div>
+        </div>
+        <div className="header-menu-bar">
+            <FaBars size="2em"/>
         </div>
         <div className="header-select">
             <div className="dropdown">
@@ -55,6 +58,7 @@ function Header() {
             <MdLogout size="1.3em"></MdLogout>
             <label className="login-text">Oturum Aç veya Kaydol</label>
         </div>
+        
     </div>
   )
 }

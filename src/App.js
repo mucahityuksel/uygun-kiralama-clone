@@ -13,9 +13,9 @@ function App() {
       <Header/>
       <Category/>
       <InformationComponent/>
-      <Product/>
-      <TeamComponent/>
-      <Footer/>
+      {/* <Product/> */}
+      {/* <TeamComponent/> 
+      {/*<Footer/> */}
     </>
   );
 }

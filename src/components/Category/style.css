@@ -4,6 +4,7 @@
     text-align: center;
     display: flex;
     margin-bottom: 5rem;
+    width: 100%;
 }
 
 .category-list{
@@ -11,20 +12,23 @@
     list-style: none;
     display: flex;
     overflow: auto;
+    width: 100%;
 }
 .category-bar{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    width: 100%;
     
 }
 
 .category-bar label{
     
-    margin-right: 1.1rem;
+    
 }
 .category-list-items{
-    margin-right: 2rem;
+    
     border: 1px solid white;
     color: black;
     width: 6rem;
@@ -108,16 +112,23 @@
     border: 1px solid rgb(0, 237, 255);
 }
 
-
-
-
-
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 550px ) and (max-width : 900px){
+    .category{
+        width: 95%;
+        margin: 0rem 1rem;
+    }
+    .category-list{
+      width: 100%;
+    }
+    .category-bar{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 549px) {
 
     .category{
-        min-width: 10rem;
-        max-width: 20rem;
-        margin-left: 1rem;
+        width: auto;
+        margin: 0rem 1rem;
     }
 
 }

@@ -1,5 +1,6 @@
 .header-component{
     display: flex;
+    
     position: fixed;
     justify-content: center;
     width: 100%;
@@ -27,6 +28,8 @@
     text-align: center;
     background-color: #f8f8f8;
     border-radius: 0.5rem;
+    display: flex;
+    
     margin: 0rem 2rem;
   
 }
@@ -35,12 +38,15 @@
     margin: 0.7rem 0.5rem;
 }
 .input-container input{
-    width: 30rem;
+    min-width: 10rem;
+    max-width: 30rem;
     border: none;
+    flex: 5;
     outline: none;
     background-color: #f8f8f8;
     margin: 0.6rem 0rem;
-    border-right: 1px solid #d1cdcd ;
+   
+
 }
 
 .header-select{
@@ -62,6 +68,7 @@
 .dropdown1{
     margin-left: 1rem;
     font-size: 0.9rem;
+    flex: 1;
     color: #a09e9e;
 }
 .dropdown-content{
@@ -181,21 +188,64 @@
     color: #525050;
     
 }
-
-@media only screen and (max-width: 600px) {
-    .input-container{
+.header-menu-bar{
+    display: none;
+}
+@media only screen and (min-width: 550px ) and (max-width : 900px){
+    
+    .dropdown1{
         display: none;
     }
-    
-    .header-select{
+    .input-container{
+        
+        align-items: center;
+        
+    }
+    .header-ilan-bar{
         display: none;
     }
     .header-login{
         display: none;
     }
     .header-component{
-       justify-content: start;
-       width: 20rem;
+       justify-content: space-between;
+       
     }
-    
+    .header-select{
+        display: none;
+    }
+    .header-menu-bar{
+        display: block;
+        margin-right:2rem;
+    }
+}
+@media only screen and (max-width: 549px ) {
+    .input-container{
+        display: none;
+    }
+    .header-login{
+        display: none;
+    }
+    .dropdown1{
+        display: none;
+    }
+    .header-select{
+        display: none;
+    }
+    .header-ilan-bar{
+        margin: 0rem 8rem;
+        display: none;
+    }
+    .header-component{
+        
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        
+        
+    }
+    .header-menu-bar{
+        display: block;
+        margin: 0rem 2rem;
+    }
 }
