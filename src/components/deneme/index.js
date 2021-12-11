@@ -11,13 +11,7 @@ function NewProduct() {
 
   const [products, setProducts] = useState(null);
   
-  useEffect(()=> {
-    axios.get("https://ukapidev.komut.team:1475/api/dashboardview/products")
-    .then((res) => {
-      console.log(res);
-      setProducts(res.data.Result)
-    })
-  },[])
+ 
   return (
     <div>
       <Carousel
