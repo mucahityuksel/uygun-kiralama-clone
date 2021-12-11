@@ -3,21 +3,18 @@
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .footer-container ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(192, 196, 207);
-    margin-left: 2rem;
-    margin-right: 2rem;
+    
+  
 }
 .footer-container ul li {
     flex: 1;
-    padding: 0rem 5rem;
+    margin-left: 7rem;
     margin-bottom: 1rem;
     
 }
@@ -64,23 +61,30 @@
     text-decoration: underline;
 }
 .last-footer{
+        
+       
     display: flex;
+    justify-content: space-between;
+    width: 100%
+    
 }
-
 .last-one{
-    width: 35rem;
+    flex: 1;
     text-align: start;
     color: rgb(114, 121, 146);
     font-size: 0.9rem;
+    margin-left: 5rem;
 }
 .last-two{
-    
-    width: 35rem;
     text-align: end;
+    justify-content: end;
+    margin-right: 5rem;
+    flex: 1;
+    
 }
-@media only screen and (min-width: 550px ) and (max-width : 900px){
+@media only screen and (min-width: 550px ) and (max-width : 1020px){
     .footer-container{
-        width: 100%;
+       
         justify-content: start;
         text-align: start;
     }
@@ -88,35 +92,62 @@
         display: flex;
         flex-direction: column;
         margin-top: 15rem;
-        width: 90%;
+        width: 40%;
 
     }
     .footer-container ul li {
         width: 50%;
+        
     }
+    
     .last-footer{
-        display: flex;
-        flex-direction: column;
         
+       
+        display: flex;
+        justify-content: space-between;
+        width: 100%
         
     }
-    .last-one,.last-two{
-       display: flex;
-       flex-direction: column;
+    .last-one{
+        flex: 1;
+        text-align: start;
+        color: rgb(114, 121, 146);
+        font-size: 0.9rem;
+        margin-left: 5rem;
+    }
+    .last-two{
+        text-align: end;
+        justify-content: end;
+        margin-right: 5rem;
+        flex: 1;
+        
     }
 }    
 @media only screen and (max-width: 549px) {
+    .footer-container{
+       
+        justify-content: start;
+        text-align: start;
+        padding-left: -2rem;
+    }
     .footer-container ul{
         display: flex;
         flex-direction: column;
         margin-top: 15rem;
-        width: 100%;
+       
+        
+    
     }
+        .footer-container ul li{
+            width: 70%;
+            margin-left: 0rem;
+        }
+    
     .last-footer{
         display: flex;
-        width: 100%;
+        width: 70%
     }
     .last-one,.last-two{
-        width: 100%;
+        width: 70%
     }
 }

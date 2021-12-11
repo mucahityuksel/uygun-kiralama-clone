@@ -6,16 +6,19 @@ import InformationComponent from './components/InformationComponent';
 import Product from './components/Product';
 import TeamComponent from './components/TeamComponent';
 import Footer from './components/Footer';
+import NewProduct from './components/deneme/index';
 
 function App() {
   return (
     <>
-      <Header/>
-      <Category/>
-      <InformationComponent/>
-      {/* <Product/> */}
-      {/* <TeamComponent/> 
-      {/*<Footer/> */}
+       <Header />
+      <Category />
+      <InformationComponent />
+      <NewProduct />
+      <TeamComponent />
+
+      <Footer />
+
     </>
   );
 }

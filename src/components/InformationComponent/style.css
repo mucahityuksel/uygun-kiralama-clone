@@ -11,7 +11,7 @@
 
 .inline-container1{
     background-image: url("../../images/body-image.png");
-    width: 80rem; 
+    width: 70%; 
     border-radius: 1.5rem;
     padding: 1rem;
     height: 23rem;
@@ -26,7 +26,7 @@
 }
 .inline-container2{
     background-image: url("../../images/body-images.png");
-    width: 75rem; 
+    width: 70%; 
     height: 23rem;
     border-radius: 1.5rem;
     padding: 1rem;

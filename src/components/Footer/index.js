@@ -55,7 +55,7 @@ function Footer() {
                   </div>
                   <div className="four-item">
                   <div className="four-items">
-                        <div><AiFillMail color="black"/></div>
+                        <div className="footer-last-icon"><AiFillMail color="black"/></div>
                         <label className="mail">uygunaliralasupport@example.com</label>
                      </div>
                   </div>

@@ -116,11 +116,11 @@
         margin-bottom: 7rem;
     }
     .left-bar{
-        
-        width: 60%;
+        border-right: none;
+        width: 40%;
     }
     .right-bar{
-        width: 60%;
+        width: 40%;
         
         padding: 7rem;
         
@@ -136,13 +136,16 @@
         
     }
     .left-bar{
-        
-        width: 50%;
+        border: none;
+        width: 60%;
+        padding: 0rem;
+        border-right: none;
     }
     .right-bar{
-        width: 50%;
+        width: 60%;
         text-align: start;
-        padding: 7rem;
+        margin-top: 2rem;
+        padding: 0rem;
         
     }
 }

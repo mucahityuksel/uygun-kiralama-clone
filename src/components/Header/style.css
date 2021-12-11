@@ -1,22 +1,19 @@
 .header-component{
     display: flex;
-    
     position: fixed;
     justify-content: center;
     width: 100%;
+    padding: 0px 20px;
     align-items: center;
     height: 7rem;
     z-index: 10;
     opacity: 1;
+    box-sizing: border-box;
     background-color: white;
     border-bottom: 1px solid #e6e3e3;
     
 }
-.header-image {
-    
-    margin: 0rem 2rem;
 
-}
 .header-image img{
     object-fit: contain;
     width: 8.5rem;
@@ -24,13 +21,16 @@
 .input-container{
     border: 1px solid #d1cdcd;
     height: 2.5rem;
-    width: 40rem;
+    width: 50%;
     text-align: center;
+    justify-content: space-between;
     background-color: #f8f8f8;
     border-radius: 0.5rem;
     display: flex;
-    
+    margin: 0px 80px;
     margin: 0rem 2rem;
+    
+   
   
 }
 .header-search-icon{
@@ -41,24 +41,28 @@
     min-width: 10rem;
     max-width: 30rem;
     border: none;
-    flex: 5;
+    flex: 4;
     outline: none;
     background-color: #f8f8f8;
-    margin: 0.6rem 0rem;
-   
-
 }
 
 .header-select{
-    overflow: hidden;
+    min-width: 6rem;
+    z-index: 15;
     margin: 0rem 1rem;
+}
+.dropdown{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 15;
 }
 .dropbtn{
     display: inline-block;
-    height: 2rem;
+   
     align-items: center;
     font-size: 0.8rem;
-    margin-top: 0.rem;
+    
     color: #a09e9e;
 }
 
@@ -66,19 +70,27 @@
     background-color: #f8f8f8;
 }
 .dropdown1{
-    margin-left: 1rem;
-    font-size: 0.9rem;
+   
+   
+    display: flex;
+    align-items: center;
+    position: relative;
     flex: 1;
+    z-index: 15;
+    justify-content: end;
+
     color: #a09e9e;
 }
 .dropdown-content{
     display: none;
     position: absolute;
+    top: 35px;
+    z-index: 20;
     border: 1px solid #d1cdcd;
-    right: 23rem;
+   
     background-color: #ffffff;
     text-align: start;
-    background-color: #ffffff;
+    
     border-radius: 0.5rem;
 
 }
@@ -86,32 +98,33 @@
     display: none;
     position: absolute;
     border: 1px solid #d1cdcd;
-    right: 30rem;
-    top: 3.9rem;
+    
+    top: 20px;
+    z-index: 20;
     text-align: start;
     background-color: #ffffff;
     border-radius: 0.5rem;
 }
 .dropdown-content a{
-    display: block;
+    display: flex;
     margin-bottom: 0.5rem;
     color: black;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    
     margin: 1rem;
 }
 
 .dropdown-content1 a{
-    display: block;
+    display: flex;
     margin-bottom: 0.5rem;
     color: black;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    
     margin: 1rem;
 }
 
 .dropdown-content1 a input{
-    width: 8rem;
+    
     background-color: #ffffff;
     border: none;
     outline: none;
@@ -120,6 +133,7 @@
    
     border: 1px solid #d1cdcd;
     outline: none;
+    
     border-radius: 0.3rem;
 }
 
@@ -141,9 +155,10 @@
     height: 2.7rem;
     background-color: #15214a;
     text-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
+    min-width: 6rem;
     color: white;
     border-radius: 0.3rem;
 }
@@ -152,7 +167,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.6rem;
+   
     cursor: pointer;
 }
 .ilan-ver-bar button{
@@ -176,7 +191,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+    white-space: nowrap;
 }
 .header-login:hover{
     background-color: #f8f8f8;
@@ -191,44 +206,34 @@
 .header-menu-bar{
     display: none;
 }
-@media only screen and (min-width: 550px ) and (max-width : 900px){
-    
-    .dropdown1{
-        display: none;
-    }
-    .input-container{
-        
-        align-items: center;
-        
-    }
-    .header-ilan-bar{
-        display: none;
-    }
-    .header-login{
-        display: none;
-    }
-    .header-component{
-       justify-content: space-between;
-       
-    }
-    .header-select{
-        display: none;
-    }
-    .header-menu-bar{
-        display: block;
-        margin-right:2rem;
-    }
+.nav-menu1,
+.nav-menu1.active{
+    right: -400px;
 }
-@media only screen and (max-width: 549px ) {
+
+ @media only screen and (max-width: 500px ){
+    .nav-menu1 {
+        
+        width: 250px !important;
+        
+    }
+ }
+ @media only screen and (min-width: 900px ){
+    .nav-menu1,
+    .nav-menu1.active{
+       display: none;
+    }
+ }
+ 
+
+@media only screen and (max-width: 900px ) {
     .input-container{
         display: none;
     }
     .header-login{
         display: none;
     }
-    .dropdown1{
-        display: none;
-    }
+    
     .header-select{
         display: none;
     }
@@ -240,12 +245,175 @@
         
         align-items: center;
         justify-content: space-between;
+        display: flex;  
+    }
+    .active {
+        right: 0;
+        transition: 350ms;
+    }
+    .nav-menu1 {
+        background-color: white;
+        width: 400px;
+        height: 100vh;
+        top: 20px;
         display: flex;
-        
+        position: fixed;    
+        flex-direction: column;
+        right: 0;
+        transition: 850ms;
+    }
+    .header-login1{
+        display: flex;
+        margin: 1rem 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         
     }
+    
+    .bar-header{
+        display: flex;
+        width: 100%;
+        
+    }
+    .bar-header div {
+        flex: 1;
+        text-align: end;
+    }
+    .bar-header img{
+        width: 10rem;
+    }
+    .bar-icon{
+        right: 0;
+    }
+    
     .header-menu-bar{
         display: block;
         margin: 0rem 2rem;
+    }
+    .input-container1 input{
+        
+        
+        border: none;
+        
+        outline: none;
+        background-color: #f8f8f8;
+        margin: 0.6rem 0rem;
+       
+    
+    }
+    .input-container1{
+        border: 1px solid #d1cdcd;
+        height: 2.5rem;
+        width: 90%;
+        
+        background-color: #f8f8f8;
+        border-radius: 0.5rem;
+        display: flex;
+        text-align: center;
+        justify-content: end;
+        margin: 2rem 1rem;
+      
+    }
+    .input-container2{
+        border: 1px solid #d1cdcd;
+        height: 2.5rem;
+        width: 90%;
+        
+        background-color: #f8f8f8;
+        border-radius: 0.5rem;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin: 2rem 1rem;
+      
+    }
+
+
+    .mainmenubtn,
+    .mainmenubtn2 {
+        background-color: #f8f8f8;
+        color: black;
+        border: none;
+        cursor: pointer;
+        
+        margin-top:20px;
+      }
+     
+      .dropdown2 {
+        position: relative;
+        display: inline-block;
+        z-index: 10;
+      }
+      .dropdown3 {
+        position: relative;
+        display: inline-block;
+        
+      }
+      .dropdown-child2 {
+        display: none;
+        background-color: white;
+        
+      }
+      .dropdown-child{
+        display: none;
+        background-color: white;
+        
+      }
+      .dropdown-child a,
+      .dropdown-child2 a  {
+        color: black;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown3:hover .dropdown-child2{
+        display: block;
+        width: 13rem;
+        margin-right: -5rem;
+        position: relative;
+        top: 15px;
+      }
+      .dropdown2:hover .dropdown-child {
+        display: block;
+        width: 13rem;
+        margin-right: -18rem;
+        margin-left: -7rem;
+      }
+
+      .header-ilan-bar1{
+        margin: 0rem 1rem;
+        height: 2.7rem;
+        background-color: #15214a;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 6rem;
+        color: white;
+        border-radius: 0.3rem;
+    }
+    
+    .ilan-ver-bar1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        cursor: pointer;
+    }
+    .ilan-ver-bar1 button{
+        background-color: #15214a;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.01rem;
+    }
+    .ilan-icon1{
+        color: #ffffff;
+        
+        
+        
     }
 }

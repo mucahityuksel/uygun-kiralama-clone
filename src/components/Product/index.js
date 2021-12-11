@@ -2,6 +2,7 @@ import React, { useEffect, useState,useRef} from 'react'
 import {BsFillArrowRightCircleFill,BsFillArrowLeftCircleFill,AiFillStar,IoIosCheckbox,MdOutlineCheckBoxOutlineBlank,AiFillHeart,FaStarHalf,AiFillSafetyCertificate} from "react-icons/all"
 import data from "../../products.json";
 import image from "../../images/product.jpg"
+import {useMediaQuery, useMediaQueries} from '@react-hook/media-query'
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import "./style.css"
@@ -9,8 +10,16 @@ function Product() {
 
   
     const [products,setProducts] = useState(data.product);
+    const [width,setWidth] = useState(window.innerWidth);
     
     
+    const media = useMediaQuery(`only screen and (min-width: 0px ) and (max-width : 900px})`)
+    const handleResize = () => {    
+        setWidth(window.innerWidth)
+    }
+    useEffect(()=> {
+        window.addEventListener("resize",handleResize)
+    },[])
     useEffect(()=> {
          console.log(data.product[0].title);
          products.map((item,key)=>{
@@ -18,6 +27,9 @@ function Product() {
                  console.log(item.rating);
              }
          })
+
+      
+       
     })
    
   return (
@@ -31,19 +43,50 @@ function Product() {
             
         </div>
         <div className="products">
+            {
+                (width/300).toFixed()
+            }
             <div  className="product-card" id='container'>
                 {
+                    
                     <Carousel
+                    
+                    
+                    
                     plugins={[
                       'infinite',
                       'arrows',
+                      
                       {
                         resolve: slidesToShowPlugin,
                         options: {
-                         numberOfSlides: 2
+                         numberOfSlides:  1
+                         
                         }
                       },
                     ]}
+                    breakpoints={{
+                        640: {
+                          plugins: [
+                           {
+                             resolve: slidesToShowPlugin,
+                             options: {
+                              numberOfSlides: 1
+                             }
+                           },
+                         ]
+                        },
+                        900: {
+                          plugins: [
+                           {
+                             resolve: slidesToShowPlugin,
+                             options: {
+                              numberOfSlides: 2
+                             }
+                           },
+                         ]
+                        }
+                      }}
                   >
                    {
                        products?.map((item,key)=> {
@@ -51,6 +94,7 @@ function Product() {
                             
                             <div className="product" key={key}>
                                 <div className="product-image">
+                                    <img src={image} className='p-image'></img>
                                     <div className="product-check1">
                                         <input className="x" type="checkbox" ></input>
                                     </div>

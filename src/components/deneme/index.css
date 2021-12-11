@@ -1,0 +1,103 @@
+.product{
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 1rem;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+.product-image{
+    
+    z-index: 1;
+}
+.product-like{
+    margin-left: 10rem;
+}
+.p-image{
+    width: 18rem;
+    height: 14rem;
+    border-radius: 1rem;
+}
+.product-check1{
+    position: absolute;
+    
+}
+
+.salerytitle{
+    background-color: #e8fff5;;
+    color: #38eaa0;
+    letter-spacing: -0.1rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 5rem;
+    text-align: center;
+    margin: 1rem 3rem;
+}
+.title{
+    font-weight: 500;
+    padding-left: 0.4rem;
+}
+.subtitle{
+    font-size: 0.8rem;
+    color: rgb(163, 163, 163);
+    padding: 0.4rem;
+    width: 100%;
+}
+.rating{
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+.rating ul {
+    display: flex;
+    list-style: none;   
+}
+.pricetitle{
+    letter-spacing: 0.001rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    
+}
+.price{
+    color: rgb(255, 25, 144);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+.security{
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+}
+.avatar{
+   
+    display: flex;
+    
+}
+.avatar img{
+    border-radius: 2rem;
+    width: 2rem;
+}
+.salery{
+    letter-spacing: 0.001;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgb(194, 194, 194);
+}
+.button{
+    width: 13rem;
+    height: 3rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: #15214a;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+
+}
+.button:hover{
+    opacity: 0.9;
+}
