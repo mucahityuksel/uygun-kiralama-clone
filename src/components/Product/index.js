@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
-
 import '@brainhubeu/react-carousel/lib/style.css';
-import image from "../../images/product.jpg"
 import { AiFillStar, AiFillHeart, FaStarHalf, AiFillSafetyCertificate } from "react-icons/all"
 import "./index.css"
-//import datas from "../../products.json"
+
 
 import axios from 'axios';
 function NewProduct() {
@@ -14,10 +12,9 @@ function NewProduct() {
   const imageURL = "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg"
 
 
-  useEffect(async () => {
-    await axios.get(`${process.env.REACT_APP_PRODUCT}`)
+  useEffect(() => {
+     axios.get(`https://ukapidev.komut.team:1475/api/dashboardview/products`)
       .then(res => {
-        console.log(res.data.Result)
         setProducts(res.data.Result)
       })
       .catch((err) => {
@@ -91,7 +88,7 @@ function NewProduct() {
                     <input className="x" type="checkbox" ></input>
                     <AiFillHeart className="product-like" color="white"></AiFillHeart>
                   </div>
-                  <img src={process.env.REACT_APP_URL + item.ProductImage} className='p-image'></img>
+                  <img src={"https://ukapidev.komut.team:1475/" + item.ProductImage} className='p-image'></img>
 
                   <div></div>
                 </div>
