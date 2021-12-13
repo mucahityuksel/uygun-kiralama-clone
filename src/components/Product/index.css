@@ -4,17 +4,16 @@
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    
 }
 .product-image{
     padding: 1rem;
     z-index: 1;
 }
 .product-like{
-    margin-left: 15rem;
+    margin-left: 10rem;
 }
 .p-image{
-    width: 18rem;
+    width: 100%;
     height: 14rem;
     border-radius: 1rem;
 }
