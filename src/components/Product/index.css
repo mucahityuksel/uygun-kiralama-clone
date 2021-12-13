@@ -1,11 +1,32 @@
 .product{
     border: 1px solid rgb(207, 207, 207);
     border-radius: 1rem;
-    margin-top: 8rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     
+    justify-content: center;
     
+}
+.product-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 2rem;
+    justify-content: space-between;
+}
+
+.product-header-title{
+    font-weight: 800;
+    font-size: 2rem;
+    
+    padding-left: 8%;
+    color: #15214a;
+}
+.product-header-city{
+    padding-left: 8%;
+    
+    color: rgb(194, 194, 194);
 }
 .product-image{
     padding: 1rem;
@@ -28,11 +49,14 @@
     background-color: #e8fff5;;
     color: #38eaa0;
     letter-spacing: -0.1rem;
-    border-radius: 2rem;
-    padding: 1rem;
     width: 5rem;
-    text-align: center;
-    margin: 0rem 1rem;
+    height: 2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    
 }
 .titles{
     display: flex;
@@ -60,14 +84,14 @@
     letter-spacing: 0.001rem;
     font-weight: 600;
     font-size: 0.9rem;
-    padding: 1rem
+    padding: 1rem 1rem
     
 }
 .price{
     color: rgb(255, 25, 144);
     font-weight: 600;
     font-size: 1.1rem;
-    padding: 1rem;
+    padding: 0rem 1rem;
     border-bottom: 1px solid rgb(207, 207, 207);
 }
 .security{
@@ -76,13 +100,14 @@
     padding: 1rem
 }
 .avatar{
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     
 }
 .avatar img{
     border-radius: 2rem;
     width: 2rem;
+    padding: 0.5rem
 }
 .salery{
     letter-spacing: 0.001;

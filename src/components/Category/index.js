@@ -1,12 +1,110 @@
 import React from 'react'
 import {AiOutlineLeft,MdOutlineDirectionsCarFilled,IoHardwareChipOutline,BiBuilding,FaCouch,GiWeight,VscBook,BsTools,BsShopWindow,GiLargeDress,IoMdFootball} from "react-icons/all"
+
+import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import "./style.css"
 
 function Category() {
   return (
     <div className="category">
+      
       <ul className="category-list">
-          
+          <Carousel
+
+          plugins={[
+            'infinite',
+            'arrows',
+            {
+              resolve: slidesToShowPlugin,
+              options: {
+                numberOfSlides: 10
+  
+              }
+            },
+          ]}
+
+          breakpoints={
+            {
+              1127: {
+
+                plugins: [
+                  'infinite',
+                  'arrows',
+                  {
+  
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 8
+  
+                    }
+                  },
+                ]
+              },
+              970: {
+
+                plugins: [
+                  'infinite',
+                  'arrows',
+                  {
+  
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 5
+  
+                    }
+                  },
+                ]
+              },
+              665: {
+
+                plugins: [
+                  'infinite',
+                  'arrows',
+                  {
+  
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 3
+  
+                    }
+                  },
+                ]
+              },
+              470: {
+
+                plugins: [
+                  'infinite',
+                  'arrows',
+                  {
+  
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 2
+  
+                    }
+                  },
+                ]
+              },
+              380: {
+
+                plugins: [
+                  'infinite',
+                  'arrows',
+                  {
+  
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 1
+  
+                    }
+                  },
+                ]
+              },
+              
+            }
+          }
+          >
           <div className="category-bar">
               <li className="category-list-items one"><div className="category-list-item i1"><MdOutlineDirectionsCarFilled size="2em" color="white"/></div></li>
               <label>Vasıta</label>
@@ -47,7 +145,7 @@ function Category() {
             <li className="category-list-items ten"><div className="category-list-item i10"><IoMdFootball size="2em" color="white"/></div></li>
             <label>Spor</label>
           </div>
-          
+          </Carousel>
       </ul>
     </div>
   )

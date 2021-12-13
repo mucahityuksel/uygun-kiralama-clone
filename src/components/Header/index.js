@@ -52,7 +52,7 @@ function Header() {
                     <input className="header-search"></input>
 
                     <div class="dropdown2">
-                        <button class="mainmenubtn">Select</button>
+                        <button class="mainmenubtn">Select <FiChevronDown/></button>
                         <div class="dropdown-child">
                             <a><input placeholder='Search' /></a>
                             <a>Furniture</a>
@@ -67,7 +67,7 @@ function Header() {
 
 
                     <div class="dropdown3">
-                        <button class="mainmenubtn2">Sehir Seçiniz</button>
+                        <button class="mainmenubtn2">Sehir Seçiniz <FiChevronDown/></button>
                         <div class="dropdown-child2">
                             <a><input placeholder='Search' /></a>
                             <a>İstanbul</a>

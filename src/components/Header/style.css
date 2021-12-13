@@ -33,6 +33,7 @@
    
   
 }
+
 .header-search-icon{
     float: left;
     margin: 0.7rem 0.5rem;
@@ -67,7 +68,7 @@
 }
 
 .dropdown:hover{
-    background-color: #f8f8f8;
+    background-color: #fff;
 }
 .dropdown1{
    
@@ -75,8 +76,10 @@
     display: flex;
     align-items: center;
     position: relative;
-    flex: 1;
+    
     z-index: 15;
+    width: 10%;
+    padding: 1rem 1rem;
     justify-content: end;
 
     color: #a09e9e;
@@ -84,7 +87,7 @@
 .dropdown-content{
     display: none;
     position: absolute;
-    top: 35px;
+    top: 15px;
     z-index: 20;
     border: 1px solid #d1cdcd;
    
@@ -99,7 +102,8 @@
     position: absolute;
     border: 1px solid #d1cdcd;
     
-    top: 20px;
+    top: 35px;
+    right: 0;
     z-index: 20;
     text-align: start;
     background-color: #ffffff;
@@ -127,14 +131,25 @@
     
     background-color: #ffffff;
     border: none;
+    width: 80%;
+    height: 2rem;
     outline: none;
 }
 .dropdown-search {
    
     border: 1px solid #d1cdcd;
     outline: none;
-    
-    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+
+}
+.dropdown-search input{
+    width: 100%;
+    height: 2rem;
+}
+.dropdown-search:hover{
+    border: 1px solid lightblue;
 }
 
 .dropdown-content a input{
@@ -264,10 +279,10 @@
     }
     .header-login1{
         display: flex;
-        margin: 1rem 1rem;
-        justify-content: center;
+        padding: 1rem;
+        justify-content: start;
         align-items: center;
-        text-align: center;
+        text-align: start;
         
     }
     
@@ -295,7 +310,10 @@
         
         
         border: none;
-        
+        border-right: 1px solid #f8f8f8;
+        width: 100%;
+        display: flex;
+        align-items: center;
         outline: none;
         background-color: #f8f8f8;
         margin: 0.6rem 0rem;
@@ -333,17 +351,22 @@
     .mainmenubtn,
     .mainmenubtn2 {
         background-color: #f8f8f8;
-        color: black;
+        color: rgb(158, 158, 158);
         border: none;
+        height: 100%;
+        width: 100%;
+        border-left: 1px solid #b4b4b4;
         cursor: pointer;
+        display: flex;
+        align-items: center;
         
-        margin-top:20px;
       }
      
       .dropdown2 {
         position: relative;
         display: inline-block;
         z-index: 10;
+        
       }
       .dropdown3 {
         position: relative;
@@ -357,15 +380,26 @@
       }
       .dropdown-child{
         display: none;
+        
         background-color: white;
         
       }
       .dropdown-child a,
       .dropdown-child2 a  {
         color: black;
-        padding: 20px;
+        padding: 10px;
         text-decoration: none;
+        text-align: start;
         display: block;
+      }
+      .dropdown-child a input,
+      .dropdown-child2 a input{
+          width: 90%;
+          height: 2rem;
+          border-radius: 0.5rem;
+          border: none;
+          outline: none;
+          background-color: rgb(230, 228, 228);
       }
       .dropdown3:hover .dropdown-child2{
         display: block;

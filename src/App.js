@@ -11,12 +11,11 @@ import NewProduct from './components/Product/index';
 function App() {
   return (
     <>
-       <Header />
+      <Header />
       <Category />
       <InformationComponent />
       <NewProduct />
       <TeamComponent />
-
       <Footer />
 
     </>

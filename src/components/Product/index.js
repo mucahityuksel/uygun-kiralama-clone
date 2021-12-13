@@ -27,6 +27,10 @@ function NewProduct() {
 
   return (
     <div>
+      <div className='product-header'>
+          <div className='product-header-title'>Yakınınızdaki Ürünler</div>
+          <div className='product-header-city'>Seçtiğiniz Konum</div>
+      </div>
       <Carousel
         offset={0}
         plugins={[
@@ -110,6 +114,7 @@ function NewProduct() {
           }
         }
       >
+        
         {
           products?.map((item, index) => {
             return (
