@@ -1,17 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+
 import '@brainhubeu/react-carousel/lib/style.css';
 import image from "../../images/product.jpg"
 import { AiFillStar, AiFillHeart, FaStarHalf, AiFillSafetyCertificate } from "react-icons/all"
 import "./index.css"
-import datas from "../../products.json"
-import { useEffect } from 'react/cjs/react.development';
+//import datas from "../../products.json"
+
 import axios from 'axios';
 function NewProduct() {
 
-  const [products, setProducts] = useState(null);
-  
- 
+  const [products, setProducts] = useState([]);
+  const imageURL = "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg"
+
+
+  useEffect(async ()=>{
+    await axios.get("https://ukapidev.komut.team:1475/api/dashboardview/products")
+    .then(res => {
+      setProducts(res.data.Result)
+      console.log(res.data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  },[])
+
+
   return (
     <div>
       <Carousel
@@ -80,7 +94,7 @@ function NewProduct() {
         }
       >
         {
-          datas.product.map((item, index) => {
+          products?.map((item, index) => {
             return (
               <div className="product" key={index}>
                 <div className="product-image">
@@ -92,27 +106,27 @@ function NewProduct() {
 
                   <div></div>
                 </div>
-                <div className="salerytitle">{item.salerytitle}</div>
-                <div className="product-item title">{item.title}</div>
-                <div className="product-item subtitle">{item.subtitle}</div>
+                <div className="salerytitle">$11/Hafta</div>
+                <div className="product-item title">{item.Name}</div>
+                <div className="product-item subtitle">Furniture</div>
                 <div className="product-item rating"><ul>
-                  <li>{item.rating === 0.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.rating >= 1 ? "#ffca28" : "white"} />}</li>
-                  <li>{item.rating === 1.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.rating >= 2 ? "#ffca28" : "white"} />}</li>
-                  <li>{item.rating === 2.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.rating >= 3 ? "#ffca28" : "white"} />}</li>
-                  <li>{item.rating === 3.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.rating >= 4 ? "#ffca28" : "white"} />}</li>
-                  <li>{item.rating === 4.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.rating >= 5 ? "#ffca28" : "white"} />}</li>
+                  <li>{item.ReviewStars === 0.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 1 ? "#ffca28" : "white"} />}</li>
+                  <li>{item.ReviewStars === 1.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 2 ? "#ffca28" : "white"} />}</li>
+                  <li>{item.ReviewStars === 2.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 3 ? "#ffca28" : "white"} />}</li>
+                  <li>{item.ReviewStars === 3.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 4 ? "#ffca28" : "white"} />}</li>
+                  <li>{item.ReviewStars === 4.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 5 ? "#ffca28" : "white"} />}</li>
                 </ul></div>
-                <div className="product-item pricetitle">{item.pricetitle}</div>
-                <div className="product-item price">{item.price}</div>
+                <div className="product-item pricetitle">Deposito Miktarı</div>
+                <div className="product-item price">{item.Deposit}{item.Currency}</div>
                 <div className="product-item security">
                   <div><AiFillSafetyCertificate color="rgb(80, 201, 214)" /></div>
-                  <div className="product-item subtitle">{item.icontext}</div>
+                  <div className="product-item subtitle">Sigorta Korumalı</div>
                 </div>
                 <div className="product-item avatar">
-                  <div><img src={item.avatar}></img></div>
+                  <div><img src={imageURL}></img></div>
                   <div>
-                    <div className="product-item sendby">{item.sendby}</div>
-                    <div className="product-item salery">{item.salery}</div>
+                    <div className="product-item sendby">Reklamı Gönderen</div>
+                    <div className="product-item salery">Mehmet Polat Koçak</div>
                   </div>
                 </div>
                 <button className="product-item button">Eşyayı Kirala</button>
