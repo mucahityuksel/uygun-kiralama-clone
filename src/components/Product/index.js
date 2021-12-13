@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { AiFillStar, AiFillHeart, FaStarHalf, AiFillSafetyCertificate } from "react-icons/all"
+import getSymbolFromCurrency from 'currency-symbol-map'
 import "./index.css"
 
 
@@ -10,12 +11,13 @@ function NewProduct() {
 
   const [products, setProducts] = useState([]);
   const imageURL = "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg"
-
+  
 
   useEffect(() => {
      axios.get(`https://ukapidev.komut.team:1475/api/dashboardview/products`)
       .then(res => {
         setProducts(res.data.Result)
+        console.log(res.data.Result)
       })
       .catch((err) => {
         console.log(err)
@@ -34,7 +36,7 @@ function NewProduct() {
           {
             resolve: slidesToShowPlugin,
             options: {
-              numberOfSlides: 2
+              numberOfSlides: 4
 
             }
           },
@@ -43,7 +45,36 @@ function NewProduct() {
         breakpoints={
 
           {
+            1120: {
 
+              plugins: [
+                'infinite',
+                'arrows',
+                {
+
+                  resolve: slidesToShowPlugin,
+                  options: {
+                    numberOfSlides: 3
+
+                  }
+                },
+              ]
+            },
+            880: {
+
+              plugins: [
+                'infinite',
+                'arrows',
+                {
+
+                  resolve: slidesToShowPlugin,
+                  options: {
+                    numberOfSlides: 2
+
+                  }
+                },
+              ]
+            },
             660: {
 
               plugins: [
@@ -92,7 +123,7 @@ function NewProduct() {
 
                   <div></div>
                 </div>
-                <div className="salerytitle">TRY{item.Price}/{item.Period}</div>
+                <div className="salerytitle">{getSymbolFromCurrency(item.Currency)}{item.Price}/{item.Period}</div>
                 <div className='titles'>
                   <div className="product-item title">{item.Name}</div>
                   <div className="product-item subtitle">{item.CategoryName === null ? "Furniture" : item.CategoryName}</div>
@@ -105,7 +136,7 @@ function NewProduct() {
                   <li>{item.ReviewStars === 4.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 5 ? "#ffca28" : "white"} />}</li>
                 </ul></div>
                 <div className="product-item pricetitle">Deposito Miktarı</div>
-                <div className="product-item price">{item.Deposit}{item.Currency}</div>
+                <div className="product-item price">{item.Deposit}{getSymbolFromCurrency(item.Currency)}</div>
                 <div className="product-item security">
                   <div><AiFillSafetyCertificate color="rgb(80, 201, 214)" /></div>
                   <div className="product-item subtitle">Sigorta Korumalı</div>
