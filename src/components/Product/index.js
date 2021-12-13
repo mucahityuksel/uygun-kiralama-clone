@@ -17,6 +17,7 @@ function NewProduct() {
   useEffect(async () => {
     await axios.get(`${process.env.REACT_APP_PRODUCT}`)
       .then(res => {
+        console.log(res.data.Result)
         setProducts(res.data.Result)
       })
       .catch((err) => {
@@ -28,7 +29,7 @@ function NewProduct() {
   return (
     <div>
       <Carousel
-        offset={10}
+        offset={0}
         plugins={[
           'infinite',
           'arrows',
@@ -36,7 +37,7 @@ function NewProduct() {
           {
             resolve: slidesToShowPlugin,
             options: {
-              numberOfSlides: 4
+              numberOfSlides: 2
 
             }
           },
@@ -46,38 +47,8 @@ function NewProduct() {
 
           {
 
-            1200: {
-              offset: 80,
-              plugins: [
-                'infinite',
-                'arrows',
-                {
+            660: {
 
-                  resolve: slidesToShowPlugin,
-                  options: {
-                    numberOfSlides: 3
-
-                  }
-                },
-              ]
-            },
-
-            700: {
-              offset: 80,
-              plugins: [
-                'infinite',
-                'arrows',
-                {
-
-                  resolve: slidesToShowPlugin,
-                  options: {
-                    numberOfSlides: 2
-
-                  }
-                },
-              ]
-            },
-            505: {
               plugins: [
                 'infinite',
                 'arrows',
@@ -90,7 +61,24 @@ function NewProduct() {
                   }
                 },
               ]
-            }
+            },
+            365: {
+
+              plugins: [
+                'infinite',
+                'arrows',
+                {
+
+                  resolve: slidesToShowPlugin,
+                  options: {
+                    numberOfSlides: 1
+
+                  }
+                },
+              ]
+            },
+
+
           }
         }
       >
@@ -107,9 +95,11 @@ function NewProduct() {
 
                   <div></div>
                 </div>
-                <div className="salerytitle">$11/Hafta</div>
-                <div className="product-item title">{item.Name}</div>
-                <div className="product-item subtitle">Furniture</div>
+                <div className="salerytitle">TRY{item.Price}/{item.Period}</div>
+                <div className='titles'>
+                  <div className="product-item title">{item.Name}</div>
+                  <div className="product-item subtitle">{item.CategoryName === null ? "Furniture" : item.CategoryName}</div>
+                </div>
                 <div className="product-item rating"><ul>
                   <li>{item.ReviewStars === 0.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 1 ? "#ffca28" : "white"} />}</li>
                   <li>{item.ReviewStars === 1.5 ? <FaStarHalf size="1.5em" color="#ffca28" /> : <AiFillStar size="1.5em" color={item.ReviewStars >= 2 ? "#ffca28" : "white"} />}</li>
@@ -127,7 +117,7 @@ function NewProduct() {
                   <div><img src={imageURL}></img></div>
                   <div>
                     <div className="product-item sendby">Reklamı Gönderen</div>
-                    <div className="product-item salery">Mehmet Polat Koçak</div>
+                    <div className="product-item salery">{item.AccountName === null ? "Mehmet Polat Koçak" : item.AccountName}</div>
                   </div>
                 </div>
                 <button className="product-item button">Eşyayı Kirala</button>

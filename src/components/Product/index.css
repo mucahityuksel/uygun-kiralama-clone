@@ -4,9 +4,10 @@
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
+    
 }
 .product-image{
-    
+    padding: 1rem;
     z-index: 1;
 }
 .product-like{
@@ -30,16 +31,21 @@
     padding: 1rem;
     width: 5rem;
     text-align: center;
-    margin: 1rem 3rem;
+    margin: 0rem 1rem;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem
 }
 .title{
     font-weight: 500;
-    padding-left: 0.4rem;
+    width: 100%;
 }
 .subtitle{
     font-size: 0.8rem;
     color: rgb(163, 163, 163);
-    padding: 0.4rem;
+   
     width: 100%;
 }
 .rating{
@@ -53,23 +59,23 @@
     letter-spacing: 0.001rem;
     font-weight: 600;
     font-size: 0.9rem;
-    padding: 0.4rem;
+    padding: 1rem
     
 }
 .price{
     color: rgb(255, 25, 144);
     font-weight: 600;
     font-size: 1.1rem;
-    padding: 0.4rem;
+    padding: 1rem;
     border-bottom: 1px solid rgb(207, 207, 207);
 }
 .security{
     display: flex;
     align-items: center;
-    padding: 0.4rem;
+    padding: 1rem
 }
 .avatar{
-    margin-left: 1rem;
+    padding: 1rem;
     display: flex;
     
 }
@@ -84,9 +90,11 @@
     color: rgb(194, 194, 194);
 }
 .button{
-    width: 100%;
+    width: 90%;
     height: 3rem;
-    margin-top: 1rem;
+    margin: 0px auto;
+    
+    margin-bottom: 0.5rem;
     border-radius: 0.5rem;
     border: none;
     outline: none;
@@ -95,7 +103,7 @@
     font-weight: 800;
     cursor: pointer;
     transition: .3s ease-in-out;
-
+    padding: 1rem;
 
 }
 .button:hover{
