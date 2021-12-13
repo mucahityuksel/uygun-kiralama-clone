@@ -6,7 +6,7 @@ import InformationComponent from './components/InformationComponent';
 
 import TeamComponent from './components/TeamComponent';
 import Footer from './components/Footer';
-import NewProduct from './components/deneme/index';
+import NewProduct from './components/Product/index';
 
 function App() {
   return (

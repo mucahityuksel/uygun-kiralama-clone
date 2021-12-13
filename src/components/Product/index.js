@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 
 import '@brainhubeu/react-carousel/lib/style.css';
@@ -14,21 +14,21 @@ function NewProduct() {
   const imageURL = "https://ficquotes.com/images/characters/boromir-the-fellowship-of-the-ring-2001.jpg"
 
 
-  useEffect(async ()=>{
-    await axios.get("https://ukapidev.komut.team:1475/api/dashboardview/products")
-    .then(res => {
-      setProducts(res.data.Result)
-      console.log(res.data)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  },[])
+  useEffect(async () => {
+    await axios.get(`${process.env.REACT_APP_PRODUCT}`)
+      .then(res => {
+        setProducts(res.data.Result)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
 
 
   return (
     <div>
       <Carousel
+        offset={10}
         plugins={[
           'infinite',
           'arrows',
@@ -46,8 +46,8 @@ function NewProduct() {
 
           {
 
-            940: {
-
+            1200: {
+              offset: 80,
               plugins: [
                 'infinite',
                 'arrows',
@@ -63,6 +63,7 @@ function NewProduct() {
             },
 
             700: {
+              offset: 80,
               plugins: [
                 'infinite',
                 'arrows',
@@ -102,7 +103,7 @@ function NewProduct() {
                     <input className="x" type="checkbox" ></input>
                     <AiFillHeart className="product-like" color="white"></AiFillHeart>
                   </div>
-                  <img src={image} className='p-image'></img>
+                  <img src={process.env.REACT_APP_URL + item.ProductImage} className='p-image'></img>
 
                   <div></div>
                 </div>

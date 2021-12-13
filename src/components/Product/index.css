@@ -10,7 +10,7 @@
     z-index: 1;
 }
 .product-like{
-    margin-left: 10rem;
+    margin-left: 15rem;
 }
 .p-image{
     width: 18rem;
@@ -19,7 +19,7 @@
 }
 .product-check1{
     position: absolute;
-    
+    display: flex;
 }
 
 .salerytitle{
@@ -69,7 +69,7 @@
     padding: 0.4rem;
 }
 .avatar{
-   
+    margin-left: 1rem;
     display: flex;
     
 }
@@ -84,7 +84,7 @@
     color: rgb(194, 194, 194);
 }
 .button{
-    width: 13rem;
+    width: 100%;
     height: 3rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
