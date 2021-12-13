@@ -1,4 +1,4 @@
 # Uygun Kirala
 
-Live Url : https://practical-noyce-28e911.netlify.app/
+Live Url : https://uygun-kirala-clone.herokuapp.com/
 
