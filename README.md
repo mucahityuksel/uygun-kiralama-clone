@@ -1,4 +1,4 @@
 # Uygun Kirala
 
-Live Url : https://uygun-kirala-clone.herokuapp.com/ 
+Live Url : https://loving-swanson-795658.netlify.app/
 
