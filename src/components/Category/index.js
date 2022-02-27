@@ -1,6 +1,5 @@
 import React from 'react'
-import {AiOutlineLeft,MdOutlineDirectionsCarFilled,IoHardwareChipOutline,BiBuilding,FaCouch,GiWeight,VscBook,BsTools,BsShopWindow,GiLargeDress,IoMdFootball} from "react-icons/all"
-
+import {MdOutlineDirectionsCarFilled,IoHardwareChipOutline,BiBuilding,FaCouch,GiWeight,VscBook,BsTools,BsShopWindow,GiLargeDress,IoMdFootball} from "react-icons/all"
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import "./style.css"

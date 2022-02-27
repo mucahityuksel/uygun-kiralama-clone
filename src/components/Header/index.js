@@ -5,7 +5,6 @@ import "./style.css"
 
 function Header() {
 
-    const [city, setCity] = useState("");
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () =>{
         setSidebar(!sidebar)
@@ -14,7 +13,7 @@ function Header() {
     return (
         <div className="header-component">
             <div className="header-image">
-                <img src={img}></img>
+                <img src={img} alt=""></img>
             </div>
             <div className="input-container">
                 <RiSearchLine className="header-search-icon"></RiSearchLine>

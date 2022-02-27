@@ -29,7 +29,7 @@ function TeamComponent() {
     <div className="team-container">
       <div className="team-body">
           <div className="left-bar">
-              <img className="team-image" src={image}></img>
+              <img className="team-image" src={image} alt=""></img>
               <label className="team-title">1.5 Milyondan fazla mutlu Müşteri</label>
               <label className="team-desc">Uygun kirala hakkındaki tecrübeleri ile ilgili ne söylediklerini görün</label>
           </div>

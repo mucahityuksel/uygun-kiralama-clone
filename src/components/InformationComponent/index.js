@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import { VscCircleFilled } from "react-icons/all"
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import image1 from "../../images/body-image.png";
-import image2 from "../../images/body-images.png"
 import "./style.css"
 
 function InformationComponent() {

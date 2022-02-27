@@ -3,6 +3,7 @@ import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { AiFillStar, AiFillHeart, FaStarHalf, AiFillSafetyCertificate } from "react-icons/all"
 import getSymbolFromCurrency from 'currency-symbol-map'
+import image from "../../images/product.jpg"
 import "./index.css"
 
 
@@ -124,7 +125,7 @@ function NewProduct() {
                     <input className="x" type="checkbox" ></input>
                     <AiFillHeart className="product-like" color="white"></AiFillHeart>
                   </div>
-                  <img src={"https://ukapidev.komut.team:1475/" + item.ProductImage} className='p-image'></img>
+                  <img src={image} className='p-image' alt=''></img>
 
                   <div></div>
                 </div>
@@ -147,7 +148,7 @@ function NewProduct() {
                   <div className="product-item subtitle">Sigorta Korumalı</div>
                 </div>
                 <div className="product-item avatar">
-                  <div><img src={imageURL}></img></div>
+                  <div><img src={imageURL} alt=""></img></div>
                   <div>
                     <div className="product-item sendby">Reklamı Gönderen</div>
                     <div className="product-item salery">{item.AccountName === null ? "Mehmet Polat Koçak" : item.AccountName}</div>
