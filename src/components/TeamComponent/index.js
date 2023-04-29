@@ -38,7 +38,7 @@ function TeamComponent() {
                 {
                     data.user.map((item,key) => {
                         return(
-                            <div className={slideIndex === key + 1 ? "slide active-anim" : "slide"}>
+                            <div className={slideIndex === key + 1 ? "slide active-anim" : "slide"} key={key}>
                                 <label className="team-name">{item.name}</label>
                                 <label className="team-title2">{item.department}</label>
                                 <label className="team-desc">{item.text}</label>

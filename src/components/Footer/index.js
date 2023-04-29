@@ -59,19 +59,16 @@ function Footer() {
                         <label className="mail">uygunaliralasupport@example.com</label>
                      </div>
                   </div>
-                  
               </div>
           </li>
       </ul>
       <div className="last-footer">
-          
             <div className="last-one">© 2020 Uyguna Kirala</div>
             <div className="last-two">
                 <SiGooglemaps/>
                 <BsFacebook/>
                 <AiFillLinkedin/>
             </div>
-         
       </div>
     </div>
   )

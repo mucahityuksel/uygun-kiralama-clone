@@ -6,7 +6,7 @@ import "./style.css"
 function Header() {
 
     const [sidebar, setSidebar] = useState(false);
-    const showSidebar = () =>{
+    const showSidebar = () => {
         setSidebar(!sidebar)
     }
 
@@ -22,13 +22,13 @@ function Header() {
                 <div className="dropdown1">Select
                     <FiChevronDown className="header-select-icon"></FiChevronDown>
                     <div className="dropdown-content1">
-                        <a className="dropdown-search">
+                        <div className="dropdown-search">
                             <input placeholder="Search"></input>
                             <RiSearchLine></RiSearchLine>
-                        </a>
-                        <a>Furniture</a>
-                        <a>Fitness</a>
-                        <a>Books</a>
+                        </div>
+                        <span>Furniture</span>
+                        <span>Fitness</span>
+                        <span>Books</span>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ function Header() {
             <nav className={sidebar ? `nav-menu1 active` : "nav-menu1"}>
 
                 <div className='bar-header'>
-                    <div><img src={img}></img></div>
+                    <div><img src={img} alt=''></img></div>
                     <div><AiOutlineClose onClick={showSidebar} size="2em"></AiOutlineClose></div>
                 </div>
                 <div className='header-login1'>
@@ -51,12 +51,12 @@ function Header() {
                     <input className="header-search"></input>
 
                     <div class="dropdown2">
-                        <button class="mainmenubtn">Select <FiChevronDown/></button>
+                        <button class="mainmenubtn">Select <FiChevronDown /></button>
                         <div class="dropdown-child">
-                            <a><input placeholder='Search' /></a>
-                            <a>Furniture</a>
-                            <a>Fitness</a>
-                            <a>Books</a>
+                            <div><input placeholder='Search' /></div>
+                            <span>Furniture</span>
+                            <span>Fitness</span>
+                            <span>Books</span>
 
                         </div>
                     </div>
@@ -66,12 +66,12 @@ function Header() {
 
 
                     <div class="dropdown3">
-                        <button class="mainmenubtn2">Sehir Seçiniz <FiChevronDown/></button>
+                        <button class="mainmenubtn2">Sehir Seçiniz <FiChevronDown /></button>
                         <div class="dropdown-child2">
-                            <a><input placeholder='Search' /></a>
-                            <a>İstanbul</a>
-                            <a>İzmir</a>
-                            <a>Trabzon</a>
+                            <div ><input placeholder='Search' /></div>
+                            <span >İstanbul</span>
+                            <span >İzmir</span>
+                            <span >Trabzon</span>
 
                         </div>
                     </div>
@@ -88,13 +88,13 @@ function Header() {
                     <label className="dropbtn">Şehir Seçiniz</label>
                     <FiChevronDown color="#a09e9e"></FiChevronDown>
                     <div className="dropdown-content">
-                        <a className="dropdown-search">
+                        <div className="dropdown-search" >
                             <input placeholder="Search" ></input>
                             <RiSearchLine></RiSearchLine>
-                        </a>
-                        <a>İstanbul</a>
-                        <a>İzmir</a>
-                        <a>Trabzon</a>
+                        </div>
+                        <span >İstanbul</span>
+                        <span >İzmir</span>
+                        <span >Trabzon</span>
                     </div>
                 </div>
             </div>

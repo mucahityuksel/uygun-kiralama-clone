@@ -5,7 +5,6 @@ import rightArrow from "../../images/arrow-19-24.png";
 
 
 export default function BtnSlider({ direction, moveSlide }) {
-  console.log(direction, moveSlide);
   return (
     <button
       onClick={moveSlide}
